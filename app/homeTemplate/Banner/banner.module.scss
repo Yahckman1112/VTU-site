@@ -15,7 +15,7 @@
   width:100% !important;
 
   @include responsive(tab){
-      padding: 0rem;
+      padding: .5rem;
     }
     
     @include responsive(phone){
