@@ -1,0 +1,56 @@
+.header {
+  width: 100%;
+  background-image: linear-gradient(to right, #f6bf9f 40%, #dc8cdb 60%);
+  padding: 0.5rem;
+  padding-left: 2rem;
+  display: flex;
+  overflow-x: hidden;
+}
+
+.title{
+    margin: 0px;
+}
+
+.logo {
+  padding: 5px 3px;
+  background-color: white;
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  color: #f6bf9f;
+
+  &_1 {
+    color: #db8ade;
+  }
+}
+.title_main {
+  color: 25px;
+  color: white;
+  font-weight: 700;
+  margin-left: 10px;
+  font-size: 25px;
+}
+
+.navs {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 50px;
+  transition: all 0.3s ease 0s;
+  flex: 1;
+}
+
+.nav_items {
+  text-decoration: none;
+  margin-left: 40px;
+  font-size: 17px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0px !important;
+
+  &:hover{
+    color:white;
+    // border-bottom:3px solid #f6bf9f;
+    transition: all .3s ease-out;
+
+  }
+}

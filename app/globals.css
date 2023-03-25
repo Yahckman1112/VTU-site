@@ -112,3 +112,14 @@ a {
   padding:0;
   width: 100%;
 }
+
+
+.hideOnMobile{
+  visibility:visible
+
+}
+@media screen and(max-width:768) {
+  .hideOnMobile{
+    visibility:none;
+  }
+}
