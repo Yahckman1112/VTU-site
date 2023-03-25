@@ -55,12 +55,15 @@ function NavBar(props) {
     <div>
       <div className={styles.header}>
         <div className={styles.title}>
+        <Link href='/' className={styles.link}>
+
           <p>
             <span className={styles.logo}>
               D<span className={styles.logo_1}>W</span>
             </span>
             <span className={styles.title_main}>DataWheel</span>
           </p>
+        </Link>
         </div>
 
         <nav className={` ${styles.hideOnMobile} ${styles.navs}`}>
@@ -83,12 +86,14 @@ function NavBar(props) {
           >
             <Offcanvas.Header closeButton>
               <Offcanvas.Title className={styles.offcanvas_title}>
+                <Link href='/'className={styles.link}> 
                 <p>
                   <span className={styles.offcanvas_title_logo}>
                     D<span className={styles.offcanvas_title_logo_1}>W</span>
                   </span>
                   <span className={styles.offcanvas_title_text}>DataWheel</span>
                 </p>
+                </Link>
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>

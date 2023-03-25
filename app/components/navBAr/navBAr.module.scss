@@ -36,12 +36,17 @@
   overflow-x: hidden;
 
   @include responsive(tab) {
-    padding-left: 1rem;
+    padding: 1rem;
   }
 }
 
 .title {
   margin: 0px;
+}
+.link{
+  
+  cursor:pointer;
+  text-decoration: none !important;
 }
 
 .logo {
@@ -67,9 +72,13 @@
 .navs {
   display: flex;
   justify-content: flex-end;
-  margin-left: 50px;
+  margin-left: 500px;
   transition: all 0.3s ease 0s;
   flex: 1;
+
+  @include responsive(tab) {
+    margin-left: 50px;
+  }
 }
 
 .nav_items {
@@ -135,7 +144,6 @@
   font-size: 17px;
   color: white;
   font-weight: 700;
-
   column-gap: 10px;
   grid-template-rows: 1;
   grid-template-columns: 20px 20px;
