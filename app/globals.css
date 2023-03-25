@@ -114,12 +114,4 @@ a {
 }
 
 
-.hideOnMobile{
-  visibility:visible
 
-}
-@media screen and(max-width:768) {
-  .hideOnMobile{
-    visibility:none;
-  }
-}

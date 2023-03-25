@@ -1,3 +1,32 @@
+@mixin responsive($breakPoint) {
+  @if $breakPoint==tab {
+    @media screen and (max-width: 768px) {
+      @content;
+    }
+  }
+  @if $breakPoint==phone {
+    @media screen and (max-width: 430px) {
+      @content;
+    }
+  }
+}
+
+.hideOnDesktop {
+  visibility: hidden;
+  @include responsive(tab) {
+    visibility: visible;
+  }
+  @include responsive(phone) {
+    visibility: visible !important;
+  }
+}
+.hideOnMobile {
+  visibility: visible;
+  @include responsive(tab) {
+    visibility: hidden;
+  }
+}
+
 .header {
   width: 100%;
   background-image: linear-gradient(to right, #f6bf9f 40%, #dc8cdb 60%);
@@ -5,10 +34,14 @@
   padding-left: 2rem;
   display: flex;
   overflow-x: hidden;
+
+  @include responsive(tab) {
+    padding-left: 1rem;
+  }
 }
 
-.title{
-    margin: 0px;
+.title {
+  margin: 0px;
 }
 
 .logo {
@@ -47,10 +80,87 @@
   color: white;
   margin-bottom: 0px !important;
 
-  &:hover{
-    color:white;
+  &:hover {
+    color: white;
     // border-bottom:3px solid #f6bf9f;
-    transition: all .3s ease-out;
-
+    transition: all 0.3s ease-out;
   }
 }
+
+.offcanvas {
+  background-color: black;
+  color: white;
+
+  &_title {
+    &_logo {
+      padding: 7px 5px;
+      background-color: white;
+      font-size: 20px;
+      font-weight: 700;
+      text-align: center;
+      color: #f6bf9f;
+      border-radius: 100%;
+
+      &_1 {
+        color: #db8ade;
+      }
+    }
+
+    &_text {
+      color: 20px;
+      color: white;
+      font-weight: 700;
+      margin-left: 10px;
+      font-size: 25px;
+    }
+  }
+}
+
+.icon {
+  margin-left: -200px;
+
+  @include responsive(phone) {
+    margin-left: -300px;
+  }
+}
+
+.resp_nav {
+  padding: 20px;
+  // display:flex;
+}
+
+.resp_navs {
+  display: grid;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  font-weight: 700;
+
+  column-gap: 10px;
+  grid-template-rows: 1;
+  grid-template-columns: 20px 20px;
+
+  &_logo {
+    grid-column: 1/2;
+  }
+
+  &_text {
+    grid-column: 2/3;
+  }
+}
+
+// .resp_navs{
+//   display: block;
+//   text-decoration: none;
+//   font-size: 17px;
+//   padding-top: 20px;
+//   // color: black;
+//   font-weight: 700;
+//   // text-align: center;
+
+//   &_logo{
+//      padding-right: 10px;
+//      color: #01d28e !important;
+//   }
+
+// }

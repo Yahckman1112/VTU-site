@@ -3,10 +3,49 @@ import React, { useState } from "react";
 import styles from "./navBAr.module.scss";
 import Link from "next/link";
 import { SiWikimediacommons } from "react-icons/si";
-// import { Link } from 'next/link';
+import { AiFillHome } from "react-icons/ai";
+import { BiLogIn } from "react-icons/bi";
+import { HiMenuAlt2 } from "react-icons/hi";
+import {FaPodcast,FaGgCircle, FaUser} from 'react-icons/fa'
+import {FiPhoneCall} from 'react-icons/fi'
+
+
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 function NavBar(props) {
+
+  const navItems =[
+    {
+      icon:<AiFillHome size={20} className={styles.resp_navs_logo}/>,
+      label:'Home',
+      link: '/'
+    },
+    {
+      icon:< FaGgCircle size={20} className={styles.resp_navs_logo}/>,
+      label:'Service',
+      link: '/'
+    },
+    {
+      icon:<FaPodcast size={20} className={styles.resp_navs_logo}/>,
+      label:'Features',
+      link: '/'
+    },
+    {
+      icon:<FaUser size={20} className={styles.resp_navs_logo}/>,
+      label:'SignUp',
+      link: '/'
+    },
+    {
+      icon:<FiPhoneCall size={20} className={styles.resp_navs_logo}/>,
+      label:'ContactUs',
+      link: '/'
+    },
+    {
+      icon:<BiLogIn size={20} className={styles.resp_navs_logo}/>,
+      label:'Login',
+      link: '/'
+    },
+  ]
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -15,79 +54,62 @@ function NavBar(props) {
   return (
     <div>
       <div className={styles.header}>
-    
-          <div className={styles.title}>
-            <p> 
-            <span className={styles.logo}>D
-               <span className={styles.logo_1}>W</span>
+        <div className={styles.title}>
+          <p>
+            <span className={styles.logo}>
+              D<span className={styles.logo_1}>W</span>
             </span>
             <span className={styles.title_main}>DataWheel</span>
-            </p>
-          </div>
-
-      <nav className={styles.navs}>
-        <Link href='/' className = {styles.nav_items}>Home</Link>
-        <Link href='/' className = {styles.nav_items}>Service</Link>
-        <Link href='/' className = {styles.nav_items}>Features</Link>
-        <Link href='/' className = {styles.nav_items}>SignUp </Link>
-        <Link href='/' className = {styles.nav_items}>ContactUs </Link>
-        <Link href='/' className = {styles.nav_items}>Login</Link>
-        <Link href='/' className = {styles.nav_items}></Link>
-      </nav>
-
-        {/* <div className={styles.logo}>
-          <Link href="/">
-            <p className={styles.logo_name}>
-              Data<span>Wheel</span>{" "}
-            </p>
-          </Link>
+          </p>
         </div>
 
-        <nav className={styles.navs}>
-          <Link href="/" className={styles.nav_items}>
-            Home
+        <nav className={` ${styles.hideOnMobile} ${styles.navs}`}>
+         {navItems.map((item,i)=>(
+          <Link href={item.link} key={i}  className={styles.nav_items}>
+            {item.label}
           </Link>
-          <Link href="/service" className={styles.nav_items}>
-            Servive
-          </Link>
-          <Link href="/features" className={styles.nav_items}>
-            Feature
-          </Link>
-          <Link href="/signUp" className={styles.nav_items}>
-            SignUp
-          </Link>
-          <Link href="/contact" className={styles.nav_items}>
-            ContactUs
-          </Link>
-          <Link href="login" className={styles.nav_items}>
-            Login
-          </Link>
+
+         ))}
         </nav>
 
-        <div>
-          <SiWikimediacommons size={34} onClick={handleShow
-          } />
+        <div className={`${styles.icon} ${styles.hideOnDesktop}`}>
+          <HiMenuAlt2 color={'white'} size={34} onClick={handleShow} />
 
+          <Offcanvas
+            className={styles.offcanvas}
+            placement={"end"}
+            show={show}
+            onHide={handleClose}
+          >
+            <Offcanvas.Header closeButton>
+              <Offcanvas.Title className={styles.offcanvas_title}>
+                <p>
+                  <span className={styles.offcanvas_title_logo}>
+                    D<span className={styles.offcanvas_title_logo_1}>W</span>
+                  </span>
+                  <span className={styles.offcanvas_title_text}>DataWheel</span>
+                </p>
+              </Offcanvas.Title>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+            {navItems.map(item=>(
 
-      <Offcanvas placement={'end'} show={show} onHide={handleClose}>
-        <Offcanvas.Header closeButton>
-          <Offcanvas.Title>
-          <div className={styles.logo}>
-          <Link href="/">
-            <p className={styles.logo_name}>
-              Data<span>Wheel</span>{" "}
-            </p>
-          </Link>
+              <div className={styles.resp_nav}>
+                <Link
+                  href={item.link}
+                  onClick={handleClose}
+                  className={styles.resp_navs}
+                >
+                  {item.icon}
+                
+                  <span className={styles.resp_nav_text}>{item.label}</span>{" "}
+                </Link>
+              </div>
+            ))}
+
+            </Offcanvas.Body>
+          </Offcanvas>
         </div>
-
-          </Offcanvas.Title>
-        </Offcanvas.Header>
-        <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
-        </Offcanvas.Body>
-      </Offcanvas>
-        </div> */}
       </div>
     </div>
   );
