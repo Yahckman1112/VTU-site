@@ -9,7 +9,7 @@ function HomeBanner(props) {
     <div className={styles.banner}>
       <div className="container">
         <div className="row">
-          <div className="col-6 col-sm-6">
+          <div className="col-12 col-lg-6 col-md-12">
             <div className={styles.side1}>
             <p className={styles.para1}>Welcome to DataWheel  </p>
 
@@ -19,9 +19,9 @@ function HomeBanner(props) {
               <Link href='/' className={styles.btn_reg}> Register Now</Link>
             </div>
           </div>
-          <div className="col-6 col-sm-6">
-            <div className="img">
-              <Image src={myImage} width="30px" height="30px" />
+          <div className="col-12 col-lg-6 col-md-12">
+            <div className={styles.img}>
+              <Image src={myImage} width="0px" height="0px" />
             </div>
           </div>
         </div>
