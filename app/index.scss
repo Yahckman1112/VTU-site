@@ -2,6 +2,26 @@
 
 $primary-color:#f6bf9f;
 $secondary-color:#dc8cdb;
+$text-color:#777777;
+
+// #dc8cdb;
+.text-upper{
+  position: relative;
+  z-index: 2;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #7a7a7a;
+}
+
+.text-upper_2{
+  margin-top: 10px;
+  line-height: 40px;
+  font-size: 26px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #111;
+}
 
 
 @mixin responsive($breakPoint) {

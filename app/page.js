@@ -9,7 +9,7 @@ export default function Home() {
   return (
     <main className={styles.main}>
       <HomeBanner />
-      {/* <Features /> */}
+      <Features />
 
     </main>
   );

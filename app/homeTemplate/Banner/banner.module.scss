@@ -34,8 +34,9 @@
   background-repeat: no-repeat;
   //  background-position-y: top;
   padding: 20px;
+  padding-bottom: 10px;
 
-  @include responsive(tab) {
+  @include responsive (tab) {
     padding: 10px;
     background-image: none;
   }
