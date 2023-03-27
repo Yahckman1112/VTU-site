@@ -1,102 +1,62 @@
-@mixin responsive($breakPoint) {
-    @if $breakPoint==tab {
-        @media screen and (max-width:768px){@content}
-    }
-    @if $breakPoint==phone {
-        @media screen and (max-width:430px){@content}
-    }
-  
-  }
-  
-.banner {
-  background-color: #e5e3e3;
-  height: 100vh;
-  padding: 1rem;
-  width:100% !important;
+@import "./../../index.scss";
 
-  @include responsive(tab){
-      padding: .5rem;
-    }
-    
-    @include responsive(phone){
-        height: auto;
-        height: 85vh !important;
-  }
+.para1 {
+  position: relative;
+  z-index: 2;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: #777777;
 }
 
+.para2 {
+  position: relative;
+  z-index: 2;
+  margin-top: 20px;
+  font-size: 64px;
+  color: #111111;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 40px;
+}
+
+.banner {
+  height: 100vh;
+  width: 100%;
+  background-image: url("./../../images/banner-right-dec.png");
+  background-position: right;
+  background-repeat: no-repeat;
+  //  background-position-y: top;
+  padding: 20px;
+}
 
 .side1 {
-
-  padding-top: 6rem;
-  padding-left: 6rem;
-
-  @include responsive(tab){
-
-    padding-top: 2rem;
-    padding-left: 4rem;
-    
-  }
-
-  @include responsive(phone){
-    padding-top: 2rem;
-    padding-left: 2rem;
-  }
-}
-.para1 {
-  font-family: "DM Sans";
-  color: rgb(16, 24, 26);
-  letter-spacing: -1px;
-  line-height: 1.2;
-@include responsive(phone){
-    line-height: 1.6;
+  padding: 20px;
+  padding-top: 160px;
 }
 
-}
-.para1_text {
-  display: block;
-  height: auto;
-  text-align: left;
-  font-weight: 700;
-  font-size: 50px;
-
-  @include responsive(phone){
-    font-size: 40px;
-  }
-}
-.para2 {
-  z-index: 8;
-  font-family: "DM Sans";
-  display: inline-block;
-  height: auto;
-  color: rgb(100, 100, 100);
-//   width: 546px;
-  line-height: 28px;
-  font-weight: 400;
-  font-size: 18px;
+.em {
+  font-style: normal;
+  color: $secondary-color;
 }
 
-.register_btn {
-  padding: 0.8rem 2rem;
-  background-color: orangered;
-  border-radius: 0.5rem;
-  background-color: rgb(38, 30, 22);
-  color: rgb(255, 255, 255);
-  font-weight: 700;
-  font-size: 15px;
+.btn_reg {
+  background-image: linear-gradient(
+    -145deg,
+    rgba(219, 138, 222, 1) 0%,
+    rgba(246, 191, 159, 1) 100%
+  );
+  padding: 12px 30px;
+//   display: inline-block;
+  border-radius: 5px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  font-size: 13px;
+  color: #fff;
   text-decoration: none;
+   &:hover{
+    color:#fff
+   }
 
-  &:hover{
-    color:rgb(255, 255, 255);
-  }
-}
-
-._btn {
-  margin-top: 1rem;
-}
-.back{
-    padding-left: 10px;
-   background-image:url('./../../images/phone.png');
-   height:140%;
-  background-repeat: no-repeat;
-   background-size: contain;
 }

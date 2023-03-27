@@ -1,35 +1,9 @@
-@mixin responsive($breakPoint) {
-  @if $breakPoint==tab {
-    @media screen and (max-width: 768px) {
-      @content;
-    }
-  }
-  @if $breakPoint==phone {
-    @media screen and (max-width: 430px) {
-      @content;
-    }
-  }
-}
 
-.hideOnDesktop {
-  visibility: hidden;
-  @include responsive(tab) {
-    visibility: visible;
-  }
-  @include responsive(phone) {
-    visibility: visible !important;
-  }
-}
-.hideOnMobile {
-  visibility: visible;
-  @include responsive(tab) {
-    visibility: hidden;
-  }
-}
+@import './../../index.scss';
 
 .header {
   width: 100%;
-  background-image: linear-gradient(to right, #f6bf9f 40%, #dc8cdb 60%);
+  background-image: linear-gradient(to right, $primary-color 40%, $secondary-color 60%);
   padding: 0.5rem;
   padding-left: 2rem;
   display: flex;
@@ -55,10 +29,10 @@
   font-size: 25px;
   font-weight: 700;
   text-align: center;
-  color: #f6bf9f;
+  color: $primary-color;
 
   &_1 {
-    color: #db8ade;
+    color: $secondary-color;
   }
 }
 .title_main {
@@ -111,7 +85,7 @@
       border-radius: 100%;
 
       &_1 {
-        color: #db8ade;
+        color: $secondary-color;
       }
     }
 
@@ -157,18 +131,3 @@
   }
 }
 
-// .resp_navs{
-//   display: block;
-//   text-decoration: none;
-//   font-size: 17px;
-//   padding-top: 20px;
-//   // color: black;
-//   font-weight: 700;
-//   // text-align: center;
-
-//   &_logo{
-//      padding-right: 10px;
-//      color: #01d28e !important;
-//   }
-
-// }

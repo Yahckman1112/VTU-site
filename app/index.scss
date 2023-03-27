@@ -1,0 +1,35 @@
+
+
+$primary-color:#f6bf9f;
+$secondary-color:#dc8cdb;
+
+
+@mixin responsive($breakPoint) {
+    @if $breakPoint==tab {
+      @media screen and (max-width: 768px) {
+        @content;
+      }
+    }
+    @if $breakPoint==phone {
+      @media screen and (max-width: 430px) {
+        @content;
+      }
+    }
+  }
+  
+  .hideOnDesktop {
+    visibility: hidden;
+    @include responsive(tab) {
+      visibility: visible;
+    }
+    @include responsive(phone) {
+      visibility: visible !important;
+    }
+  }
+  .hideOnMobile {
+    visibility: visible;
+    @include responsive(tab) {
+      visibility: hidden;
+    }
+  }
+  
