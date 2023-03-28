@@ -3,7 +3,7 @@
 .body {
   // color: ;
   padding: 20px;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   margin-top: 5%;
   // background-image: url('./../../images/banner-left-dec.png');
@@ -40,6 +40,7 @@
   text-align: center;
   padding: 10px;
   overflow-x: hidden;
+  // background-color: white;
 
 
   @include responsive(tab){

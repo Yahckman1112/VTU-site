@@ -1,0 +1,47 @@
+@import './../../index.scss';
+
+.service{
+    height: 100vh;
+    // background-color: #f4feff;
+    background-image: url('./../../images/our-service-left-dec.png'), url('./../../images/our-service-right-dec.png');
+    background-repeat: no-repeat,no-repeat;
+    background-position: left top,right top;
+}
+
+
+.para1{
+    @extend .text-upper;
+    text-align:center;
+    
+}
+
+.para2{
+    @extend .text-upper_2;
+    text-align:center;
+}
+
+.span{
+   color: $secondary-color;
+}
+
+.btn_serv{
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 5px !important;
+    margin-bottom: 40px;
+    font-size: 20px;
+    color: #111;
+    background-color: #fff;
+    cursor: pointer;
+    vertical-align: middle;
+    font-weight: 900;
+    transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+    border: 3px solid rgba(219,138,222,0.5);
+    width: 80%;
+}
+
+.active{
+    color: #dc8cdb;
+    border: 3px solid rgba(219,138,222,1);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+}
