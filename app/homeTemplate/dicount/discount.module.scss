@@ -6,7 +6,7 @@
     height:100vh;
     padding:100px 0px;
     margin-top:10%;
-    margin-bottom:10%;
+    // margin-bottom:10%;
     background-image:url('./../../images/cta-bg.png');
     background-size: cover;
     background-repeat: no-repeat;
@@ -60,4 +60,48 @@
     @include responsive(tab){
         margin-top: 5%;
     }
+}
+
+
+
+
+.wheel{
+    height:90vh;
+    background-image: url('./../../images/wheel-left-dec.png'),url('./../../images/wheel-right-dec.png');
+    background-repeat:no-repeat, no-repeat;
+    background-position:top left, bottom right;
+    padding: 10px;
+    padding-top: 80px;
+
+    @include responsive(phone){
+        // height:auto
+    }
+
+
+}
+
+
+.wheel_para1{
+    @extend .text-upper_2;
+   text-align:center
+}
+.span{
+    color: $secondary-color;
+    // padding-top:;
+}
+.wheel_para2{
+    font-size: 16px;
+    font-style: italic;
+    line-height: 25px;
+    color: #4a4a4a;
+}
+
+.wheel_side2{
+    // background-image:url('./../../images/wheel.jpg');
+    background-image: url('./../../images/wheel.jpg');
+    height:100%;
+    background-size: cover;
+    border-radius: 10px;
+    width: 100%;
+    // background-position: center;
 }
