@@ -9,11 +9,11 @@ function Discount(props) {
         <div className={styles.body}>
           <div className="container">
             <div className="row">
-                <div className="col-12 col-lg-6 col-md-6">
+                <div className="col-12 col-lg-6 col-md-12">
         
                     < Image src={img} height='1px' width='1px'/>
                 </div>
-                <div className="col-12 col-lg-6 col-md-6">
+                <div className="col-12 col-lg-6 col-md-12">
                     <p className={styles.para1}>
                         Up to 5% Off for your First Transaction
 

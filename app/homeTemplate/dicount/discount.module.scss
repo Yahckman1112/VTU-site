@@ -7,7 +7,19 @@
     padding:100px 0px;
     margin-top:10%;
     margin-bottom:10%;
-    background-image:url('./../../images/cta-bg.png')
+    background-image:url('./../../images/cta-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    @include responsive(tab){
+        margin-top:80% ;
+        height: auto;
+    }
+
+   @include responsive(phone){
+    margin-top: 190%;
+    height: auto;
+   }
 }
 
 .para1{
@@ -16,6 +28,13 @@
     color: #fff;
     line-height: 74px;
     margin-top: 20px;
+
+    @include responsive(tab){
+        font-size:50px
+    }
+    @include responsive(phone){
+        font-size:45px
+    }
 }
 
 .btn{
@@ -28,13 +47,17 @@
     text-transform: uppercase;
     transition: all .3s;
     width:50%;
-    // text-decoration:none;
+
     text-decoration: none;
 
-    
+
     
 }
 
 .btn_cont{
     margin-top: 10%;
+
+    @include responsive(tab){
+        margin-top: 5%;
+    }
 }
