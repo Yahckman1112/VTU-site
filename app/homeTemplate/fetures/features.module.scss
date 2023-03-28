@@ -11,10 +11,12 @@
 
   @include responsive(tab){
     margin-top: 75%;
-  
+    margin-bottom:90%
+    
   }
   @include responsive(phone){
     margin-top: 155%;
+    margin-bottom:170%
     
     // margin-left: 10% ;
   }

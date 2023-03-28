@@ -1,0 +1,40 @@
+@import './../../index.scss';
+
+
+.body{
+    // color:$primary-color;
+    height:100vh;
+    padding:100px 0px;
+    margin-top:10%;
+    margin-bottom:10%;
+    background-image:url('./../../images/cta-bg.png')
+}
+
+.para1{
+    font-size: 62px;
+    font-weight: 800;
+    color: #fff;
+    line-height: 74px;
+    margin-top: 20px;
+}
+
+.btn{
+    font-size: 13px;
+    color: $secondary-color;
+    background-color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all .3s;
+    width:50%;
+    // text-decoration:none;
+    text-decoration: none;
+
+    
+    
+}
+
+.btn_cont{
+    margin-top: 10%;
+}
