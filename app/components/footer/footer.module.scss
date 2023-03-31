@@ -1,0 +1,43 @@
+@import './../../index.scss';
+
+.body{
+    height:150vh;
+    background-image: url('./../../images/footer-bg.png'),url('./../../images/footer-left-dec.png');
+    background-repeat: no-repeat;
+    background-position: bottom, top left ;
+   
+}
+
+// form
+
+.form{
+    margin-left: -100px;
+    position: relative;
+    z-index: 5;
+    background-color: #fff;
+    margin-top: 40px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+    border-radius: 15px;
+    padding: 40px;
+}
+
+.para1{
+    @extend .text-upper;
+
+}
+
+.para2{
+    @extend .text-upper_2;
+    font-weight:800 !important;
+}
+
+.span{
+    color:$secondary-color;
+
+}
+
+.contact_btn{
+    @extend .btn_reg;
+    border: none;
+    outline: none;
+}

@@ -32,7 +32,7 @@ function Discount(props) {
             <div className="col-12 col-lg-6 col-md-6">
               <p className={styles.wheel_para1}>
                 {" "}
-                Why Easy <span className={styles.span}>DataWheel?</span> {" "}
+                Why  <span className={styles.span}>DataWheel?</span> {" "}
               </p>
               <p className={styles.wheel_para2}>
                 We provide our services base values that continues to grow
