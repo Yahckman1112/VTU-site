@@ -19,6 +19,10 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     padding: 40px;
+
+    @include responsive(tab){
+        margin-left: 0px
+    }
 }
 
 .para1{
@@ -40,4 +44,11 @@
     @extend .btn_reg;
     border: none;
     outline: none;
+}
+
+.map{
+    border: 0;
+    border-radius: 15px;
+    position: relative;
+    z-index: 2;
 }
