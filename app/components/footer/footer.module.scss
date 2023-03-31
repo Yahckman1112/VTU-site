@@ -19,6 +19,7 @@
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
     border-radius: 15px;
     padding: 40px;
+    
 
     @include responsive(tab){
         margin-left: 0px
@@ -46,9 +47,19 @@
     outline: none;
 }
 
+
+
+
+// map 
 .map{
     border: 0;
     border-radius: 15px;
     position: relative;
     z-index: 2;
+}
+
+.phone{
+    @extend .form;
+    margin-left: 0px;
+    margin-top:-20px;
 }

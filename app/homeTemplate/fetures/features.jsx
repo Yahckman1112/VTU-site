@@ -1,28 +1,40 @@
 import React from "react";
 import styles from "./features.module.scss";
 import { BiLogIn } from "react-icons/bi";
+import { GiCommercialAirplane } from "react-icons/gi";
+import {
+  BsCreditCard,
+  BsDatabaseLock,
+  BsFillTelephoneFill,
+} from "react-icons/bs";
 
 function Features(props) {
   const cardDatas = [
     {
-      logo: <BiLogIn className={styles.real_logo} size={20} />,
+      logo: <BsCreditCard className={styles.real_logo} size={5} />,
       title: "E-wallet System",
       text: ` Your e-wallet is the safest, earliest and fastest means of
       carrying out transaction with us. Your funds are secure with your
       e-wallet and can be kept for you as long as you.`,
     },
     {
-      logo: <BiLogIn className={styles.real_logo} size={20} className={styles.real_logo} />,
+      logo: (
+        <BsDatabaseLock
+          className={styles.real_logo}
+          size={5}
+          className={styles.real_logo}
+        />
+      ),
       title: "Reliable and Secure",
       text: `We have a fully reliable and dependent platform You get 100% value for any transaction you carry with us .`,
     },
     {
-      logo: <BiLogIn className={styles.real_logo} size={20} />,
-      title: "Automated servive",
+      logo: <GiCommercialAirplane className={styles.real_logo} size={5} />,
+      title: "Automated service",
       text: `Our service delivery and wallet funding is automated. Your purchase are automated and get delivered to you at the blink of an eye`,
     },
     {
-      logo: <BiLogIn className={styles.real_logo} size={20} />,
+      logo: <BsFillTelephoneFill className={styles.real_logo} size={5} />,
       title: "Customer Support",
       text: `Our customers are premium to us, hence satisfying them is our top most priority. our customers service is availabe 24/7t.`,
     },

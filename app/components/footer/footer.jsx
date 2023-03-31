@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./footer.module.scss";
 import ContactForm from "./contactForm";
+import { FaUser } from 'react-icons/fa';
 function Footer(props) {
   const google =
     "https://www.google.com/maps/place/Odo+Oba+Rd,+200136,+Mawniya,+Oyo/@7.5475929,3.8939144,17z/data=!4m6!3m5!1s0x1039f1cdb2ed5e7b:0x133fbb82df2b6282!8m2!3d7.5475929!4d3.8939144!16s%2Fg%2F1hjgk3qz3";
@@ -21,6 +22,17 @@ function Footer(props) {
                 referrerpolicy="no-referrer-when-downgrade"
                 className={styles.map}
               ></iframe>
+
+              <div className="row">
+                <div className="col-12 col-lg-4 col-md-4 offset-lg-1">
+                  <div className={styles.phone}>
+                    {/* <FaUser/> <span>phone Number </span> */}
+                  </div>
+                </div>
+                <div className="col-12 col-lg-4 col-md-4">
+                  {/* 1 */}
+                </div>
+              </div>
             </div>
           </div>
           <div className="col-12 col-lg-4 col-md-12">
