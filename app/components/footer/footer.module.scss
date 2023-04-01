@@ -5,6 +5,13 @@
     background-image: url('./../../images/footer-bg.png'),url('./../../images/footer-left-dec.png');
     background-repeat: no-repeat;
     background-position: bottom, top left ;
+    padding-bottom:10px;
+    
+
+    @include responsive(tab){
+        height:auto;
+        margin-top: 40px;
+    }
    
 }
 
@@ -62,9 +69,70 @@
 
 .phone{
     @extend .form;
+    border-radius: 5px;
+    padding:10px;
     margin-left: 0px;
-    margin-top:-20px;
-    // display:flex;
+    margin-top:-15px;
+    display:grid;
+    grid-gap:10px;
+    grid-template-columns:30% 70%;
+    
+    @include responsive(tab){
+        margin-top:10px;
+        grid-template-columns:10% 70%;
+        width:100%;
+    }
+    
+    @include responsive(phone){
+       
+        grid-template-columns:20% 70%;
+    }
+
+    &_logo{
+        
+          
+          border-radius:100%;
+        grid-column: 1/2;
+
+
+        
+    }
+    
+    &_num{
+        grid-column: 2/3;
+
+        &_1{
+            font-size: 18px;
+            font-weight: 800;
+            text-transform: uppercase;
+            display: block;
+        }
+        
+        &_2{
+            font-size: 15px;
+            color: #dc8cdb;
+            font-weight: 700;
+            display: block;
+        }
+    }
+}
+
+
+.call_logo{
+    margin-right: 15px;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    background: rgb(219,138,222);
+    background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
+    color: #fff;
+    // border-radius: 100%;
+    padding: 15px;
 
 }
+
+
 

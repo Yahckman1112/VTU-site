@@ -24,20 +24,33 @@ function Footer(props) {
               ></iframe>
 
               <div className="row">
-                <div className="col-12 col-lg-4 col-md-4 offset-lg-1">
+                <div className="col-12 col-lg-4 col-md-12 offset-lg-1">
                   <div className={styles.phone}>
-                    <div>
-                    <FaUser className={styles.call_logo}/> 
-
+                    <div className={styles.phone_logo}>
+                    <FaUser size={10} className={styles.call_logo}/> 
                     </div>
-                    <div>
-                      08181682144
+                    <div className={styles.phone_num} >
+                      <span className={styles.phone_num_1}>Phone</span>
+                      <span className={styles.phone_num_2}>08146283237</span>
                     </div>
+                  </div>
+                   
+                    
+                </div>
+                <div className="col-12 col-lg-4 col-md-12">
+                  {/* 1 */}
+                  <div className={styles.phone}>
+                    <div className={styles.phone_logo}>
+                    <FaUser size={10} className={styles.call_logo}/> 
+                    </div>
+                    <div className={styles.phone_num} >
+                      <span className={styles.phone_num_1}>Mobile</span>
+                      <span className={styles.phone_num_2}>08050458307</span>
+                    </div>
+                   
                     
                   </div>
-                </div>
-                <div className="col-12 col-lg-4 col-md-4">
-                  {/* 1 */}
+                  
                 </div>
               </div>
             </div>
