@@ -26,7 +26,14 @@ function Footer(props) {
               <div className="row">
                 <div className="col-12 col-lg-4 col-md-4 offset-lg-1">
                   <div className={styles.phone}>
-                    {/* <FaUser/> <span>phone Number </span> */}
+                    <div>
+                    <FaUser className={styles.call_logo}/> 
+
+                    </div>
+                    <div>
+                      08181682144
+                    </div>
+                    
                   </div>
                 </div>
                 <div className="col-12 col-lg-4 col-md-4">

@@ -17,7 +17,7 @@ function ContactForm(props) {
           <Form.Control type="email" placeholder="Your email" />
         </Form.Group>
         <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-          <Form.Control as="textarea" rows={3} placeholder="Your message" />
+          <Form.Control as="textarea" rows={4} placeholder="Your message" />
         </Form.Group>
 
         <button type="submit" className={styles.contact_btn}>
