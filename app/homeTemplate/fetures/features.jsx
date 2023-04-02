@@ -40,7 +40,7 @@ function Features(props) {
     },
   ];
   return (
-    <div className={styles.body}>
+    <div className={styles.body} id="features">
       <div className={styles.para}>
         <p className={styles.para_1}>Features</p>
         <p className={styles.para_2}>

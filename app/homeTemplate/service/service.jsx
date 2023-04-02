@@ -64,7 +64,7 @@ function Service(props) {
   const [isChange, setIsChange] = useState(false);
 
   return (
-    <div className={styles.service}>
+    <div className={styles.service} id="service" >
       <p className={styles.para1}>Our Service</p>
       <p className={styles.para2}>
         {" "}

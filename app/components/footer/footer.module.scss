@@ -1,138 +1,161 @@
-@import './../../index.scss';
+@import "./../../index.scss";
 
-.body{
-    height:150vh;
-    background-image: url('./../../images/footer-bg.png'),url('./../../images/footer-left-dec.png');
-    background-repeat: no-repeat;
-    background-position: bottom, top left ;
-    padding-bottom:10px;
-    
+.body {
+  height: 120vh;
+  background-image: url("./../../images/footer-bg.png"),
+    url("./../../images/footer-left-dec.png");
+  background-repeat: no-repeat;
+  background-position: bottom, top left;
+  padding-bottom: 10px;
 
-    @include responsive(tab){
-        height:auto;
-        margin-top: 40px;
-    }
-   
+  @include responsive(tab) {
+    height: auto;
+    margin-top: 40px;
+  }
 }
 
 // form
 
-.form{
-    margin-left: -100px;
-    position: relative;
-    z-index: 5;
-    background-color: #fff;
-    margin-top: 40px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
-    border-radius: 15px;
-    padding: 40px;
-    
+.form {
+  margin-left: -100px;
+  position: relative;
+  z-index: 5;
+  background-color: #fff;
+  margin-top: 40px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  padding: 40px;
 
-    @include responsive(tab){
-        margin-left: 0px
-    }
-}
-
-.para1{
-    @extend .text-upper;
-
-}
-
-.para2{
-    @extend .text-upper_2;
-    font-weight:800 !important;
-}
-
-.span{
-    color:$secondary-color;
-
-}
-
-.contact_btn{
-    @extend .btn_reg;
-    border: none;
-    outline: none;
-}
-
-
-
-
-// map 
-.map{
-    border: 0;
-    border-radius: 15px;
-    position: relative;
-    z-index: 2;
-}
-// 
-
-
-.phone{
-    @extend .form;
-    border-radius: 5px;
-    padding:10px;
+  @include responsive(tab) {
     margin-left: 0px;
-    margin-top:-15px;
-    display:grid;
-    grid-gap:10px;
-    grid-template-columns:30% 70%;
-    
-    @include responsive(tab){
-        margin-top:10px;
-        grid-template-columns:10% 70%;
-        width:100%;
-    }
-    
-    @include responsive(phone){
-       
-        grid-template-columns:20% 70%;
-    }
-
-    &_logo{
-        
-          
-          border-radius:100%;
-        grid-column: 1/2;
-
-
-        
-    }
-    
-    &_num{
-        grid-column: 2/3;
-
-        &_1{
-            font-size: 18px;
-            font-weight: 800;
-            text-transform: uppercase;
-            display: block;
-        }
-        
-        &_2{
-            font-size: 15px;
-            color: #dc8cdb;
-            font-weight: 700;
-            display: block;
-        }
-    }
+    padding: 20px;
+  }
 }
 
-
-.call_logo{
-    margin-right: 15px;
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    background: rgb(219,138,222);
-    background: linear-gradient(-145deg, rgba(219,138,222,1) 0%, rgba(246,191,159,1) 100%);
-    color: #fff;
-    // border-radius: 100%;
-    padding: 15px;
-
+.para1 {
+  @extend .text-upper;
 }
 
+.para2 {
+  @extend .text-upper_2;
+  font-weight: 800 !important;
+}
 
+.span {
+  color: $secondary-color;
+}
 
+.contact_btn {
+  @extend .btn_reg;
+  border: none;
+  outline: none;
+}
+.errorMsg{
+  color:red
+}
+
+// map
+.map {
+  border: 0;
+  border-radius: 15px;
+  position: relative;
+  z-index: 2;
+}
+//
+
+.phone {
+  @extend .form;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 0px;
+  margin-top: -15px;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 30% 70%;
+
+  @include responsive(tab) {
+    margin-top: 10px;
+    grid-template-columns: 10% 70%;
+    width: 100%;
+  }
+
+  @include responsive(phone) {
+    grid-template-columns: 20% 70%;
+  }
+
+  &_logo {
+    border-radius: 100%;
+    grid-column: 1/2;
+  }
+
+  &_num {
+    grid-column: 2/3;
+
+    &_1 {
+      font-size: 18px;
+      font-weight: 800;
+      text-transform: uppercase;
+      display: block;
+    }
+
+    &_2 {
+      font-size: 15px;
+      color: #dc8cdb;
+      font-weight: 700;
+      display: block;
+    }
+  }
+}
+
+.call_logo {
+  margin-right: 15px;
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  background: rgb(219, 138, 222);
+  background: linear-gradient(
+    -145deg,
+    rgba(219, 138, 222, 1) 0%,
+    rgba(246, 191, 159, 1) 100%
+  );
+  color: #fff;
+  // border-radius: 100%;
+  padding: 15px;
+}
+
+// footer
+
+.foot {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.foot_logo {
+  width: 44px;
+  height: 44px;
+  display: inline-block;
+  text-align: center;
+  line-height: 44px;
+  background-color: #fff;
+  color: #dc8cdb;
+  border-radius: 50%;
+  transition: all 0.5s;
+  padding: 13px;
+  margin-right: 10px;
+
+  &:hover {
+    color: #0d6efd;
+  }
+}
+
+.copyright {
+  margin-top: 10px;
+  text-align: center;
+  color: #fff;
+  margin: 40px 0px;
+  font-size: 14px;
+  font-weight: 500;
+}

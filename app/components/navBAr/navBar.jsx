@@ -23,12 +23,12 @@ function NavBar(props) {
     {
       icon:< FaGgCircle size={20} className={styles.resp_navs_logo}/>,
       label:'Service',
-      link: '/'
+      link: '#service'
     },
     {
       icon:<FaPodcast size={20} className={styles.resp_navs_logo}/>,
       label:'Features',
-      link: '/'
+      link: '#features'
     },
     {
       icon:<FaUser size={20} className={styles.resp_navs_logo}/>,
@@ -38,7 +38,7 @@ function NavBar(props) {
     {
       icon:<FiPhoneCall size={20} className={styles.resp_navs_logo}/>,
       label:'ContactUs',
-      link: '/'
+      link: '#contact'
     },
     {
       icon:<BiLogIn size={20} className={styles.resp_navs_logo}/>,
