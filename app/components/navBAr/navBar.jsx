@@ -33,7 +33,7 @@ function NavBar(props) {
     {
       icon:<FaUser size={20} className={styles.resp_navs_logo}/>,
       label:'SignUp',
-      link: '/'
+      link: '/register'
     },
     {
       icon:<FiPhoneCall size={20} className={styles.resp_navs_logo}/>,

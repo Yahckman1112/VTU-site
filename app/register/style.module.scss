@@ -1,0 +1,135 @@
+
+
+.wrapper{
+    min-height: 100vh;
+    width: 100%;
+	display: flex;
+	align-items: center;
+	background-image: linear-gradient(
+        to right bottom,
+        rgba(219, 138, 222, 0.7) 50%,
+        rgba(246, 191, 159, 0.7) 50%
+      ), url('./../images/pexels-mike-b-120049.jpg');
+
+      
+    // background-color: pink;
+	background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.inner {
+	min-width: 861px;
+	transform: translateX(47px);
+    width:70%;
+	margin: 35px;
+    margin-left:18%;
+    margin-right:18%;
+	display: flex;
+	background: rgba(255, 255, 255, 0.571);
+	border-radius: 20px;
+	padding: 35px;
+	
+	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+
+ 
+}
+
+
+	.img {
+		border-radius: 15px;
+		transform: translateX(-94px);
+        // margin-left:-94px
+
+	}
+
+
+.para1{
+    font-size: 25px;
+	text-align: center;
+	margin-bottom: 21px;
+	color: #333;
+	text-transform: uppercase;
+	font-family: "ElMessiri-SemiBold.ttf";
+}
+
+.input{
+    height: 47px;
+	display: block;
+	border: 1px solid #e6e6e6;
+	background: none;
+	border-radius: 5px;
+	padding: 0 19px;
+	&:focus {
+		border: 1px solid #f4d5cc;
+	}
+}
+
+.form {
+	
+	padding-left: -20px;
+	min-width: 63.88%;
+    
+	// transform: translateX(-34px);
+}
+
+
+.form_row{
+    display: flex;
+    
+
+
+
+    &_2{
+        // grid-column:2/3
+        margin-left:10px
+    }
+
+}
+
+.form_control {
+	height: 47px;
+	display: block;
+	border: 1px solid #e6e6e6;
+	background: none;
+	border-radius: 5px;
+	padding: 0 19px;
+	&:focus {
+		border: 1px solid #f4d5cc;
+	}
+
+}
+.btn {
+	height: 47px;
+	width: 174px;
+	display: flex;
+	border: none;
+	color: #fff;
+	align-items: center;
+	justify-content: center;
+	margin: auto;
+	margin-top: 30px;
+	cursor: pointer;
+	font-family: "Montserrat-Medium";
+	text-transform: uppercase;
+	background: #84cde1;
+	border-radius: 5px;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	overflow: hidden;
+	-webkit-transition-duration: 0.5s;
+	transition-duration: 0.5s;
+	-webkit-transition-property: color, background-color;
+	transition-property: color, background-color;
+	i {
+		margin-left: 8px;
+		-webkit-transform: translateZ(0);
+  		transform: translateZ(0);
+	}
+	&:hover {
+	
+		background-color: #17c8f8;
+		color: white;
+	
+	}
+}
