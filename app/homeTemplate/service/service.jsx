@@ -8,7 +8,7 @@ import img4 from "./../../images/courses-04.jpg";
 
 // import Image from next/image;
 import Image from "next/image";
-import Fade from "react-reveal/Fade";
+
 
 function Service(props) {
   const [active, setActive] = useState([0]);

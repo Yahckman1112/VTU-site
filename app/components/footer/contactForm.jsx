@@ -22,6 +22,8 @@ function ContactForm(props) {
     onSubmit: (values) => {
 
       console.log(values);
+
+      formik.handleReset()
     },
   });
 
