@@ -3,15 +3,9 @@ import React from "react";
 import styles from "./footer.module.scss";
 import Form from "react-bootstrap/Form";
 import { useFormik } from "formik";
-import * as Yup from "yup";
+// import * as Yup from "yup";
+import { mailValidator } from "@/app/utils/validator";
 function ContactForm(props) {
-  const mailValidator = () => {
-    return Yup.object({
-      name: (Yup.string().required("Enter ur name")),
-      email: (Yup.string().required("Enter ur mail")),
-      message: (Yup.string().required("Enter ur message")),
-    });
-  };
   const formik = useFormik({
     initialValues: {
       name: "",
