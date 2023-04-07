@@ -18,5 +18,11 @@ import * as Yup from "yup";
        pwd: (Yup.string().required("Enter your message")),
      });
    };
+  export const loginValidator = () => {
+     return Yup.object({
+       email: (Yup.string().required("Enter your mail")),
+       pwd: (Yup.string().required("Enter your message")),
+     });
+   };
 
 //    firstName lastName email phone number pwd

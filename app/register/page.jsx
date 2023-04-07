@@ -5,27 +5,25 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import {registerValidator} from '@/app/utils/validator'
+import { registerValidator } from "@/app/utils/validator";
 // import { Fa } from 'react-icons/fa'
 import { useFormik } from "formik";
 
 import img from "./../images/courses-04.jpg";
 function page(props) {
-
   const formik = useFormik({
     initialValues: {
-      firstName:'',
-lastName:'',
-email:'',
-phoneNumber:'',
-pwd:'',
+      firstName: "",
+      lastName: "",
+      email: "",
+      phoneNumber: "",
+      pwd: "",
     },
     validationSchema: registerValidator(),
     onSubmit: (values) => {
-
       console.log(values);
 
-      formik.handleReset()
+      formik.handleReset();
     },
   });
 
@@ -60,7 +58,7 @@ pwd:'',
                   value={formik.values.firstName}
                   onChange={formik.handleChange}
                 />
-                  {formik.touched.firstName && formik.errors.firstName && (
+                {formik.touched.firstName && formik.errors.firstName && (
                   <p className={styles.errorMsg}>{formik.errors.firstName}</p>
                 )}
               </Form.Group>
@@ -76,7 +74,7 @@ pwd:'',
                   value={formik.values.lastName}
                   onChange={formik.handleChange}
                 />
-                  {formik.touched.lastName && formik.errors.lastName && (
+                {formik.touched.lastName && formik.errors.lastName && (
                   <p className={styles.errorMsg}>{formik.errors.lastName}</p>
                 )}
               </Form.Group>
@@ -91,9 +89,9 @@ pwd:'',
                 value={formik.values.email}
                 onChange={formik.handleChange}
               />
-                {formik.touched.email && formik.errors.email && (
-                  <p className={styles.errorMsg}>{formik.errors.email}</p>
-                )}
+              {formik.touched.email && formik.errors.email && (
+                <p className={styles.errorMsg}>{formik.errors.email}</p>
+              )}
             </Form.Group>
             <Form.Group className={`   mb-3`} controlId="formBasicEmail">
               <Form.Control
@@ -104,9 +102,9 @@ pwd:'',
                 value={formik.values.phoneNumber}
                 onChange={formik.handleChange}
               />
-                {formik.touched.phoneNumber && formik.errors.phoneNumber && (
-                  <p className={styles.errorMsg}>{formik.errors.phoneNumber}</p>
-                )}
+              {formik.touched.phoneNumber && formik.errors.phoneNumber && (
+                <p className={styles.errorMsg}>{formik.errors.phoneNumber}</p>
+              )}
             </Form.Group>
 
             <Form.Group className={`  mb-3`} controlId="formBasicEmail">
@@ -118,9 +116,9 @@ pwd:'',
                 value={formik.values.pwd}
                 onChange={formik.handleChange}
               />
-                {formik.touched.pwd && formik.errors.pwd && (
-                  <p className={styles.errorMsg}>{formik.errors.pwd}</p>
-                )}
+              {formik.touched.pwd && formik.errors.pwd && (
+                <p className={styles.errorMsg}>{formik.errors.pwd}</p>
+              )}
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicCheckbox">

@@ -43,7 +43,7 @@ function NavBar(props) {
     {
       icon:<BiLogIn size={20} className={styles.resp_navs_logo}/>,
       label:'Login',
-      link: '/'
+      link: '/login'
     },
   ]
   const [show, setShow] = useState(false);
