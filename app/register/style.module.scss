@@ -1,4 +1,4 @@
-
+@import './../index.scss';
 
 .wrapper{
     min-height: 100vh;
@@ -7,32 +7,51 @@
 	align-items: center;
 	background-image: linear-gradient(
         to right bottom,
-        rgba(219, 138, 222, 0.7) 50%,
-        rgba(246, 191, 159, 0.7) 50%
-      ), url('./../images/pexels-mike-b-120049.jpg');
-
-      
-    // background-color: pink;
+        rgba(246, 191, 159, 0.7) 50%,
+        rgba(219, 138, 222, 0.7) 50%
+      ), url('./../images/wheel.jpg');
 	background-size: cover;
     background-repeat: no-repeat;
+	background-position:center;
 
 }
 
 .inner {
-	min-width: 861px;
+	// min-width: 861px;
 	transform: translateX(47px);
     width:70%;
 	margin: 35px;
     margin-left:18%;
     margin-right:18%;
 	display: flex;
-	background: rgba(255, 255, 255, 0.571);
+	background: rgba(255, 255, 255, 0.7);
 	border-radius: 20px;
 	padding: 35px;
-	
 	box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+	
+	@include responsive(tab){
+		width:90%;
+		max-width: 760px;
+		transform: translateX(47px);
+		margin: 20px;
+	
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+	@include responsive(phone){
+	    display: block;
+    transform: translateX(0);
+    border-radius:10px;
+    box-shadow: none;
+	padding:10px;
+	margin:10px;
+    margin-right:0px !important;
 
- 
+	}
+
+
+
+	
 }
 
 
@@ -40,6 +59,12 @@
 		border-radius: 15px;
 		transform: translateX(-94px);
         // margin-left:-94px
+		
+		@include responsive(phone){
+			transform: translateX(0px);
+			
+		}
+	
 
 	}
 
@@ -70,19 +95,29 @@
 	padding-left: -20px;
 	min-width: 63.88%;
     
-	// transform: translateX(-34px);
+	@include responsive(phone){
+		margin-top: 10px;
+		padding: 10px;
+	}
 }
 
 
 .form_row{
     display: flex;
     
-
+	@include responsive(phone){
+		display: grid;
+	}
 
 
     &_2{
         // grid-column:2/3
-        margin-left:10px
+        margin-left:10px;
+		
+		@include responsive(phone){
+			
+			margin-left:0px
+		}
     }
 
 }
@@ -114,16 +149,12 @@
 	text-transform: uppercase;
 	background: #84cde1;
 	border-radius: 5px;
-	-webkit-transform: perspective(1px) translateZ(0);
 	transform: perspective(1px) translateZ(0);
 	overflow: hidden;
-	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
-	-webkit-transition-property: color, background-color;
 	transition-property: color, background-color;
 	i {
 		margin-left: 8px;
-		-webkit-transform: translateZ(0);
   		transform: translateZ(0);
 	}
 	&:hover {
