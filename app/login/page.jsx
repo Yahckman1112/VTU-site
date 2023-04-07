@@ -25,7 +25,7 @@ function Login(props) {
       <div className={`pt-30 pb-50 ${styles.form_wrapper}`}>
         <p className={styles.para1}>Account Login </p>
 
-        <Form className={styles.form}>
+        <Form className={styles.form} onSubmit={formik.handleSubmit}>
           <Form.Group className="mb-4" controlId="formBasicEmail">
             <Form.Control
               className={`${styles.form_input}`}
