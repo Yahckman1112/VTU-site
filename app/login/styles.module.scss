@@ -1,3 +1,5 @@
+@import './../index.scss';
+
 .page {
   background-image: linear-gradient(
       to right bottom,
@@ -14,6 +16,13 @@
   align-items: center;
   // padding-left:40%;
   padding-left: 40%;
+
+  @include responsive(tab){
+    padding-left:24%
+  }
+  @include responsive(phone){
+    padding-left:4%
+  }
 }
 
 .form_wrapper {
