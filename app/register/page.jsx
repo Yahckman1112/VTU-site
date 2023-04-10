@@ -159,6 +159,7 @@ function page(props) {
               {/* Submit */}
               {isLoading? 'Saving Data....' : 'Register' }
             </button>
+            <p> Already have an account <span> <Link href='/login'>Sign in</Link> </span> </p>
           </Form>
         </div>
       </div>

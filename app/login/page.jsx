@@ -6,10 +6,10 @@ import InputGroup from "react-bootstrap/InputGroup";
 import { useFormik } from "formik";
 import { loginValidator } from "@/app/utils/validator";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import {auth} from './../firebase'
 import { useRouter } from 'next/navigation';
 import Swal from 'sweetalert2'
-import {auth} from './../firebase'
-// import Swal from 'sweetalert2'
+import Link from 'next/link'
 function Login(props) {
   const [isLoading, setisLoading] = useState(false)
   const router = useRouter()
@@ -82,10 +82,13 @@ function Login(props) {
             )}
           </Form.Group>
 
-          <button disabled={isLoading} type="submit" className={styles.btn}>
+          <button disabled={isLoading} type="submit" className={`  ${styles.btn}`}>
             {/* login */}
             {isLoading? 'Authenticating....': 'Login'}
           </button>
+
+        <p>don't have an account? <span> <Link href='/register'> sign up</Link>  </span></p>
+        <Link href='/'>Back to home</Link>
         </Form>
       </div>
     </div>
