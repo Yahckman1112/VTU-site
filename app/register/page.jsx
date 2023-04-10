@@ -1,16 +1,23 @@
 "use client";
-import React from "react";
+import React,{useState} from "react";
 import styles from "./style.module.scss";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { registerValidator } from "@/app/utils/validator";
-// import { Fa } from 'react-icons/fa'
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { useFormik } from "formik";
+import {auth} from './../firebase'
+import { useRouter } from 'next/navigation';
+import Swal from 'sweetalert2'
 
 import img from "./../images/courses-04.jpg";
 function page(props) {
+  const [isLoading, setisLoading] = useState(false)
+  const router = useRouter();
+
+
   const formik = useFormik({
     initialValues: {
       firstName: "",
@@ -20,9 +27,32 @@ function page(props) {
       pwd: "",
     },
     validationSchema: registerValidator(),
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit: async (values) => {
+      // console.log(values);
 
+      setisLoading(true)
+
+      await createUserWithEmailAndPassword(auth, values.email,values.pwd)
+      .then((userCredential)=>{
+        const user = userCredential.user;
+        console.log(user);
+        router.push('/')
+      })
+      .catch((error) => {
+        setisLoading(false)
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage)
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text:error.code || 'Authentication failed',
+          showCancelButton:true,
+          showConfirmButton:false
+        })
+        
+    });
+    setisLoading(false)
       formik.handleReset();
     },
   });
@@ -30,6 +60,7 @@ function page(props) {
   // console.log(formik.initialValues);
   return (
     <div>
+      {/* {isLoading && 'loding' } */}
       <div className={styles.wrapper}>
         <div className={styles.inner}>
           <div className={styles.image_holder}>
@@ -124,8 +155,9 @@ function page(props) {
             <Form.Group className="mb-3" controlId="formBasicCheckbox">
               <Form.Check type="checkbox" label="Check me out" />
             </Form.Group>
-            <button className={styles.btn} type="submit">
-              Submit
+            <button disabled={isLoading} className={styles.btn} type="submit">
+              {/* Submit */}
+              {isLoading? 'Saving Data....' : 'Register' }
             </button>
           </Form>
         </div>

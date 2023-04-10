@@ -1,21 +1,49 @@
 "use client";
-import React from "react";
+import React,{useState} from "react";
 import styles from "./styles.module.scss";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 import { useFormik } from "formik";
 import { loginValidator } from "@/app/utils/validator";
-
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from 'next/navigation';
+import Swal from 'sweetalert2'
+import {auth} from './../firebase'
+// import Swal from 'sweetalert2'
 function Login(props) {
+  const [isLoading, setisLoading] = useState(false)
+  const router = useRouter()
   const formik = useFormik({
     initialValues: {
       email: "",
       pwd: "",
     },
     validationSchema: loginValidator(),
-    onSubmit: (values) => {
-      console.log(values);
+    onSubmit:async (values) => {
+      // console.log(values);
+      setisLoading(true)
 
+    await   signInWithEmailAndPassword (auth, values.email, values.pwd)
+      .then((userCredential) => {
+          const user = userCredential.user;
+          router.push("/")
+          console.log(user);
+
+      })
+      .catch((error) => {
+        setisLoading(false)
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          console.log(errorCode, errorMessage);
+          Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text:error.code || 'Authentication fail',
+            showCancelButton:true,
+            showConfirmButton:false
+          })
+      });
+      setisLoading(false)
       formik.handleReset();
     },
   });
@@ -54,8 +82,9 @@ function Login(props) {
             )}
           </Form.Group>
 
-          <button type="submit" className={styles.btn}>
-            login
+          <button disabled={isLoading} type="submit" className={styles.btn}>
+            {/* login */}
+            {isLoading? 'Authenticating....': 'Login'}
           </button>
         </Form>
       </div>
